@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GlobalAzureBLRDemo.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Cognitive Services Demo"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Image
+                x:Name="CapturedImage"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Picture to extract text from"
+                HeightRequest="300"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CaptureImageButton"
+                Text="Capture image"
+                SemanticProperties.Hint="Captures picture to extract text from"
+                Clicked="CaptureImageButton_Clicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="ExtractTextButton"
+                Text="Extract Text"
+                SemanticProperties.Hint="Extracts text from captured picture"
+                Clicked="ExtractTextButton_Clicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
